@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>حسام مصطفى إبراهيم — سيرة ذاتية</title>
+  <meta name="description" content="السيرة الذاتية لحسام مصطفى إبراهيم — كاتب صحفي ومستشار تدريب مُعتمد في مجالات اللغة العربية والإعلام والذكاء الاصطناعي." />
+  <style>
+    :root{
+      --bg: #0e1220;
+      --panel:#12182a;
+      --ink:#eaf2ff;
+      --muted:#b9c7e6;
+      --brand:#6cf0c2;
+      --brand-2:#7aa8ff;
+      --accent:#ffd166;
+      --border:rgba(255,255,255,.08);
+      --shadow: 0 10px 30px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.04);
+      --chip:#192138;
+      --ok:#22c55e;
+      --warn:#f59e0b;
+      --bad:#ef4444;
+    }
+    [data-theme="light"]{
+      --bg:#f6f8ff;
+      --panel:#ffffff;
+      --ink:#12172a;
+      --muted:#5a6a8a;
+      --brand:#1fb89c;
+      --brand-2:#3b82f6;
+      --accent:#b453ff;
+      --border:rgba(0,0,0,.08);
+      --chip:#f1f5ff;
+      --shadow: 0 10px 25px rgba(16,24,40,.08), inset 0 1px 0 rgba(0,0,0,.03);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, "Segoe UI", "Cairo", "Noto Sans Arabic", Tahoma, Arial, sans-serif;
+      background: radial-gradient(1200px 800px at 110% -10%, rgba(122,168,255,.15), transparent 60%),
+                  radial-gradient(900px 700px at -10% 110%, rgba(108,240,194,.12), transparent 60%),
+                  var(--bg);
+      color:var(--ink);
+      line-height:1.7;
+      scroll-behavior:smooth;
+    }
+    a{color:var(--brand-2); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{
+      display:grid; grid-template-columns: 340px 1fr; gap:24px;
+      max-width:1180px; margin:0 auto; padding:24px;
+    }
+    header{
+      position:relative; overflow:hidden; border-radius:18px;
+      background: linear-gradient(120deg, rgba(122,168,255,.22), rgba(108,240,194,.22) 55%, rgba(255,209,102,.25));
+      box-shadow:var(--shadow); border:1px solid var(--border); padding:28px 24px 34px;
+      isolation:isolate;
+    }
+    .glow{
+      position:absolute; inset:-40% -10% auto -10%; height:300px; z-index:-1;
+      background: conic-gradient(from 120deg at 50% 50%, rgba(122,168,255,.55), rgba(108,240,194,.55), rgba(255,209,102,.6), rgba(122,168,255,.55));
+      filter: blur(40px) saturate(120%); opacity:.25; animation: swirl 10s linear infinite;
+    }
+    @keyframes swirl { to { transform: rotate(360deg); } }
+    h1{margin:0 0 6px; font-size: clamp(24px, 3.6vw, 40px); letter-spacing:.2px}
+    .role{display:inline-block; background:linear-gradient(90deg,var(--brand),var(--brand-2)); color:#041016; padding:6px 12px; border-radius:999px; font-weight:700; font-size:.95rem}
+    .top-actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+    .btn{
+      display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:10px;
+      background:var(--panel); border:1px solid var(--border); color:var(--ink); box-shadow:var(--shadow);
+    }
+    .btn:hover{transform: translateY(-1px); transition:.2s}
+    .theme-toggle{margin-inline-start:auto}
+
+    nav{
+      display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; padding-top:10px; border-top:1px dashed var(--border)
+    }
+    nav a{padding:8px 12px; border-radius:8px; background:var(--chip); border:1px solid var(--border)}
+    main{display:block}
+    .sidebar{
+      position:sticky; top:18px; align-self:start; background:var(--panel); border:1px solid var(--border);
+      border-radius:18px; box-shadow:var(--shadow); padding:18px; overflow:hidden;
+    }
+    .card{
+      background:var(--panel); border:1px solid var(--border); border-radius:18px; padding:18px; margin-bottom:18px; box-shadow:var(--shadow);
+    }
+    h2{
+      margin:0 0 14px; font-size: clamp(18px, 2.2vw, 26px);
+      position:relative; display:inline-block; padding-bottom:6px;
+    }
+    h2::after{
+      content:""; position:absolute; inset:auto 0 -4px 0; height:3px; border-radius:6px;
+      background:linear-gradient(90deg, var(--brand), var(--brand-2));
+      transform-origin:right; transform: scaleX(0);
+      animation: underline .9s ease forwards var(--stagger, .2s);
+    }
+    @keyframes underline { to { transform: scaleX(1);} }
+
+    /* Chips */
+    .chips{display:flex; flex-wrap:wrap; gap:8px}
+    .chip{
+      background:var(--chip); border:1px solid var(--border); border-radius:999px; padding:6px 10px; font-size:.92rem
+    }
+
+    /* Timeline */
+    .timeline{position:relative; padding-inline-start:22px}
+    .timeline::before{content:""; position:absolute; inset:0 auto 0 8px; width:2px; background:linear-gradient(var(--brand),var(--brand-2)); opacity:.6}
+    .tl-item{position:relative; padding:0 0 16px 16px}
+    .tl-item::marker{content:""}
+    .dot{
+      position:absolute; inset:4px auto auto -3px; width:12px; height:12px; border-radius:50%;
+      background:linear-gradient(180deg,var(--brand),var(--brand-2)); box-shadow:0 0 0 3px rgba(122,168,255,.15);
+    }
+    .tl-h{margin:0; font-weight:700}
+    .tl-meta{color:var(--muted); font-size:.92rem; margin:2px 0 8px}
+    .bullets{margin:0; padding-inline-start:18px}
+    .bullets li{margin:4px 0}
+
+    /* Contact list & icons */
+    .list{margin:0; padding:0; list-style:none; display:grid; gap:8px}
+    .row{display:flex; align-items:center; gap:10px}
+    .row svg{inline-size:20px; block-size:20px}
+
+    /* Links grid */
+    .links{display:grid; grid-template-columns:repeat(2,1fr); gap:10px}
+    .link{display:flex; align-items:center; gap:8px; border:1px solid var(--border); border-radius:12px; padding:10px; background:var(--chip)}
+
+    /* Reveal on scroll */
+    .reveal{opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease}
+    .reveal.in{opacity:1; transform:none}
+
+    /* Print */
+    @media print{
+      body{background:#fff; color:#000}
+      header .glow, .top-actions, nav, .theme-toggle, .back-top{display:none!important}
+      .wrap{display:block; padding:0}
+      .sidebar{position:static; border-color:#ddd; box-shadow:none}
+      .card, header{page-break-inside:avoid; break-inside:avoid; box-shadow:none; border-color:#ddd}
+      a::after{content:" (" attr(href) ")"; font-size:.85em; color:#444}
+    }
+
+    /* Responsive */
+    @media (max-width:992px){
+      .wrap{grid-template-columns: 1fr}
+      nav{gap:8px}
+    }
+
+    /* Small fancy separators */
+    .sep{height:1px; background:linear-gradient(90deg, transparent, var(--border), transparent); margin:10px 0 14px}
+
+    /* Simple skill bars (no fake levels) */
+    .skill{display:grid; grid-template-columns:auto 1fr; gap:8px; align-items:center}
+    .bar{height:7px; background:linear-gradient(90deg, rgba(122,168,255,.25), rgba(108,240,194,.25)); border-radius:999px; overflow:hidden; border:1px solid var(--border)}
+    .bar span{display:block; height:100%; width:0%}
+    .skill[data-lvl] .bar span{ width: attr(data-lvl percentage); } /* might not be supported; left zero to avoid fabricating levels */
+
+    /* Back to top button */
+    .back-top{
+      position:fixed; inset:auto 18px 18px auto; z-index:99; padding:10px 12px; border-radius:10px;
+      background:var(--panel); border:1px solid var(--border); box-shadow:var(--shadow); display:none
+    }
+    .back-top.show{display:block}
+  </style>
+</head>
+<body>
+  <header class="card" id="top">
+    <div class="glow" aria-hidden="true"></div>
+    <h1>حسام مصطفى إبراهيم</h1>
+    <div class="role">كاتب صحفي ومستشار تدريب مُعتمد — لغة عربية | إعلام | ذكاء اصطناعي</div>
+
+    <div class="top-actions">
+      <button class="btn" id="printBtn" aria-label="طباعة الصفحة">
+        <!-- print icon -->
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M6 9V3h12v6h1a3 3 0 0 1 3 3v5h-4v4H8v-4H4v-5a3 3 0 0 1 3-3h-1Zm2-4v4h8V5H8Zm8 12H8v2h8v-2Zm4-2v-2a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2h14Z"/></svg>
+        طباعة
+      </button>
+      <a class="btn" id="downloadCV" href="#" download aria-label="تنزيل السيرة الذاتية الأصلية">
+        <!-- download icon -->
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3v10.586l3.293-3.293 1.414 1.414L12 17.414 7.293 11.707l1.414-1.414L11 13.586V3h1ZM5 19h14v2H5v-2Z"/></svg>
+        تنزيل الأصل
+      </a>
+      <button class="btn theme-toggle" id="themeToggle" aria-label="تبديل الثيم">🌓 تبديل الثيم</button>
+    </div>
+
+    <nav aria-label="روابط تنقّل داخلية">
+      <a href="#about">نبذة</a>
+      <a href="#exp">الخبرات</a>
+      <a href="#edu">التعليم والشهادات</a>
+      <a href="#skills">المهارات</a>
+      <a href="#projects">المشروعات</a>
+      <a href="#workshops">ورش العمل</a>
+      <a href="#books">المؤلفات</a>
+      <a href="#links">روابط مهمة</a>
+      <a href="#contact">التواصل</a>
+    </nav>
+  </header>
+
+  <div class="wrap">
+    <!-- Sidebar -->
+    <aside class="sidebar reveal" aria-labelledby="quick">
+      <h2 id="quick">نظرة سريعة</h2>
+      <div class="sep"></div>
+      <ul class="list">
+        <li class="row" aria-label="الهاتف">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.4 15.4 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.2 21 3 13.8 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.3.2 2.5.57 3.6a1 1 0 0 1-.25 1L6.6 10.8Z"/></svg>
+          <a href="tel:+201006763171">00201006763171</a>
+        </li>
+        <li class="row" aria-label="البريد الإلكتروني">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v.34l-10 6.25L2 6.34V6Zm0 2.66V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8.66l-9.4 5.86a2 2 0 0 1-2.2 0L2 8.66Z"/></svg>
+          <a href="mailto:hosammostafa_it@yahoo.com">hosammostafa_it@yahoo.com</a>
+        </li>
+        <li class="row" aria-label="العنوان">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7Zm0 9.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/></svg>
+          <span>العبور، الحي الثاني، محلية 2، شارع 1 المتفرع من يوسف جوهر، جمهورية مصر العربية</span>
+        </li>
+        <li class="row" aria-label="تاريخ الميلاد">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 2h2v2h6V2h2v2h3a2 2 0 0 1 2 2v3H2V6a2 2 0 0 1 2-2h3V2Zm15 9v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-9h20Z"/></svg>
+          <span>20 مايو 1980</span>
+        </li>
+        <li class="row" aria-label="الجنسية">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 4h18v2H3V4Zm0 7h18v2H3v-2Zm0 7h18v2H3v-2Z"/></svg>
+          <span>مصري</span>
+        </li>
+      </ul>
+
+      <div class="sep"></div>
+      <h3 style="margin-top:8px">مجالات التخصص</h3>
+      <div class="chips" aria-label="مجالات التخصص">
+        <span class="chip">التدقيق اللغوي</span>
+        <span class="chip">التحرير الصحفي</span>
+        <span class="chip">إدارة الديسك</span>
+        <span class="chip">صناعة المحتوى</span>
+        <span class="chip">التدريب</span>
+        <span class="chip">الترجمة</span>
+        <span class="chip">الذكاء الاصطناعي للمحتوى</span>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main>
+      <!-- About -->
+      <section id="about" class="card reveal" aria-labelledby="h-about">
+        <h2 id="h-about">نبذة مختصرة</h2>
+        <p>
+          خبير في اللغة العربية والإعلام وصناعة المحتوى والذكاء الاصطناعي، يتمتع بخبرة تتجاوز 20 عامًا في التحرير والتدقيق اللغوي والتدريب وإدارة الفرق الإعلامية. 
+          مستشار لغوي لمؤسسات دولية مثل الأمم المتحدة ووزارة الاتصالات المصرية. 
+          مؤلف لأكثر من 15 كتابًا، ومتخصص في دمج الذكاء الاصطناعي في صناعة المحتوى والتدريب. 
+          يمتلك حضورًا رقميًا واسعًا ويتوفر على خبرة إقليمية في تدريب المتخصصين في الإعلام والتحرير الرقمي في الوطن العربي.
+        </p>
+      </section>
+
+      <!-- Experience -->
+      <section id="exp" class="card reveal" aria-labelledby="h-exp">
+        <h2 id="h-exp">الخبرات العملية</h2>
+        <ol class="timeline" aria-label="تايملاين الخبرات">
+          <li class="tl-item">
+            <span class="dot" aria-hidden="true"></span>
+            <p class="tl-h">خبير اللغة العربية — هيئة الأمم المتحدة للمرأة</p>
+            <p class="tl-meta">من 07/2023 إلى الآن — مصر/عن بُعد</p>
+            <ul class="bullets">
+              <li>التدقيق والصياغة وتطوير أدلة الأسلوب.</li>
+            </ul>
+          </li>
+          <li class="tl-item">
+            <span class="dot" aria-hidden="true"></span>
+            <p class="tl-h">قائد فريق الأنوتيشن — EchoNova</p>
+            <p class="tl-meta">من 02/2025 إلى الآن</p>
+            <ul class="bullets">
+              <li>إدارة الجودة وإشراف فرق الوسم اللغوي.</li>
+            </ul>
+          </li>
+          <li class="tl-item">
+            <span class="dot"></span>
+            <p class="tl-h">رئيس الديسك المركزي — صحيفة اليوم السعودية (موقع)</p>
+            <p class="tl-meta">08/2022 → 08/2023</p>
+          </li>
+          <li class="tl-item">
+            <span class="dot"></span>
+            <p class="tl-h">مساعد رئيس التحرير ورئيس الديسك ورئيس قسم الثقافة — جريدة/موقع الطريق</p>
+            <p class="tl-meta">02/2020 → 12/2023</p>
+          </li>
+          <li class="tl-item">
+            <span class="dot"></span>
+            <p class="tl-h">رئيس تحرير — موقع «اكتب صح»</p>
+            <p class="tl-meta">2013 → الآن</p>
+          </li>
+          <li class="tl-item">
+            <span class="dot"></span>
+            <p class="tl-h">مسؤول الديسك والمراجعة اللغوية (مستقل)</p>
+            <p class="tl-meta">2017 → الآن</p>
+            <ul class="bullets">
+              <li>الطبعة العربية من مجلة <em>Nature</em>، منظمة العمل الدولية، شبكة أريج، منظمة الصحة العالمية.</li>
+            </ul>
+          </li>
+          <li class="tl-item">
+            <span class="dot"></span>
+            <p class="tl-h">رئيس المحتوى العربي — وزارة الاتصالات وتكنولوجيا المعلومات</p>
+            <p class="tl-meta">04/2019 → 12/2021</p>
+          </li>
+          <li class="tl-item">
+            <span class="dot"></span>
+            <p class="tl-h">مدير تحرير البرنامج الصباحي — DMC News</p>
+            <p class="tl-meta">03/2018 → 09/2019</p>
+          </li>
+          <li class="tl-item">
+            <span class="dot"></span>
+            <p class="tl-h">مستشار اللغة العربية — وزارة البترول المصرية</p>
+            <p class="tl-meta">2017 → 2018</p>
+          </li>
+          <li class="tl-item">
+            <span class="dot"></span>
+            <p class="tl-h">مدير المحتوى العربي ورئيس الترجمة — iClick السعودية</p>
+            <p class="tl-meta">2017 → 2019</p>
+          </li>
+          <li class="tl-item">
+            <span class="dot"></span>
+            <p class="tl-h">رئيس الديسك — مبتدا / دوت مصر / جود نيوز فور مي</p>
+            <p class="tl-meta">2013 → 2017</p>
+          </li>
+          <li class="tl-item">
+            <span class="dot"></span>
+            <p class="tl-h">محرر تقني أول — Taya IT</p>
+            <p class="tl-meta">2009 → 2012</p>
+          </li>
+          <li class="tl-item">
+            <span class="dot"></span>
+            <p class="tl-h">المحرر العام والمشرف على الصفحات — التحرير/الدستور/الطريق</p>
+            <p class="tl-meta">2010 → 2018</p>
+          </li>
+          <li class="tl-item">
+            <span class="dot"></span>
+            <p class="tl-h">مدقق لغوي ومحرر ديسك — مجلتا «كلمتنا» و«سيدتي»</p>
+            <p class="tl-meta">2007 → 2010</p>
+          </li>
+          <li class="tl-item">
+            <span class="dot"></span>
+            <p class="tl-h">مدرس لغة عربية / محرر أدبي وتقني — «بص وطل»</p>
+            <p class="tl-meta">2004 → 2008</p>
+          </li>
+          <li class="tl-item">
+            <span class="dot"></span>
+            <p class="tl-h">مدرس برمجة — معاهد الحاسب الآلي / جامعة المنصورة</p>
+            <p class="tl-meta">2001 → 2004</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- Education & Certs -->
+      <section id="edu" class="card reveal" aria-labelledby="h-edu">
+        <h2 id="h-edu">التعليم والشهادات</h2>
+        <div class="chips" style="margin-bottom:10px">
+          <span class="chip">ليسانس الآداب والتربية — العربية، جامعة المنصورة (2001)</span>
+          <span class="chip">دبلوم الدراسات العليا — النقد الأدبي، أكاديمية الفنون (2023)</span>
+          <span class="chip">باحث ماجستير — تقنيات الذكاء الاصطناعي (أكاديمية الفنون)</span>
+          <span class="chip">عضو نقابة الصحفيين المصريين</span>
+        </div>
+        <div class="sep"></div>
+        <h3>شهادات احترافية</h3>
+        <ul>
+          <li>TOT من شريف العطار — مهارات التدريب أونلاين مع Abi Daruvalla.</li>
+          <li>الشهادة الوظيفية لتدريس العربية للأجانب — الجامعة الأمريكية بالقاهرة.</li>
+          <li>شهادة «مدرس مُبدع خبير» — مجتمع مايكروسوفت للتعليم.</li>
+          <li>القانون الدولي الإنساني — اللجنة الدولية للصليب الأحمر.</li>
+        </ul>
+        <h3>شهادات دولية من مايكروسوفت</h3>
+        <ul>
+          <li>MCSD (Visual Basic 6.0)، MCP (VB.NET)، MOS (Office Specialist)، MCP (Analyzing Requirements…)</li>
+        </ul>
+        <h3>شهادات في الذكاء الاصطناعي</h3>
+        <ul>
+          <li>Career Essentials in Generative AI — Microsoft & LinkedIn.</li>
+          <li>Google AI Essentials.</li>
+        </ul>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="card reveal" aria-labelledby="h-skills">
+        <h2 id="h-skills">المهارات</h2>
+        <div class="chips" aria-label="مهارات">
+          <span class="chip">التدقيق الأسلوبي</span>
+          <span class="chip">إدارة غرف الأخبار</span>
+          <span class="chip">كتابة الأدلة (Style Book)</span>
+          <span class="chip">التدريب وبناء المناهج</span>
+          <span class="chip">تحرير الفيديو (Camtasia)</span>
+          <span class="chip">تحرير النصوص والسيناريو</span>
+          <span class="chip">تكامل الذكاء الاصطناعي في المحتوى</span>
+          <span class="chip">أساسيات بايثون</span>
+        </div>
+        <!-- مقياس تقدّم محايد دون اختلاق مستويات -->
+        <div class="sep"></div>
+        <div class="skill" data-lvl="">
+          <strong>اللغة العربية</strong>
+          <div class="bar" aria-hidden="true"><span></span></div>
+        </div>
+        <div class="skill" data-lvl="">
+          <strong>التدقيق اللغوي</strong>
+          <div class="bar" aria-hidden="true"><span></span></div>
+        </div>
+        <div class="skill" data-lvl="">
+          <strong>إدارة المحتوى</strong>
+          <div class="bar" aria-hidden="true"><span></span></div>
+        </div>
+        <!-- ملاحظة: يمكن ملء data-lvl لاحقًا إن رغبت بنسبة تقديرية. -->
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="card reveal" aria-labelledby="h-projects">
+        <h2 id="h-projects">آخر مشروعاتي</h2>
+        <ul>
+          <li>التدقيق اللغوي لبوابة مصر الرقمية (الحكومة المصرية).</li>
+          <li>التدقيق لتقرير «التنمية البشرية في مصر 2021» — الأمم المتحدة.</li>
+          <li>دراسة «العنف ضد المرأة ذات الإعاقة» — الأمم المتحدة (2021).</li>
+          <li>موقع الأمان الرقمي — معهد جوته (ترجمة/صياغة/تدقيق).</li>
+          <li>استراتيجية التحول الرقمي للحكومة المصرية 2021 — وزارة الاتصالات.</li>
+          <li>البروتوكول الطبي للرعاية الصحية لضحايا العنف — منظمة الصحة العالمية.</li>
+          <li>مواد دبلومة الإعلام الرقمي — مركز كمال أدهم (AUC).</li>
+          <li>«رؤية مصر 2030» — وزارة التخطيط والتنمية الاقتصادية.</li>
+          <li>تقرير إنجازات برنامج الأمم المتحدة الإنمائي في مصر.</li>
+          <li>التدقيق في المونتاج لمسلسل «رسالة الإمام» (رمضان 2023).</li>
+          <li>تحرير أدبي لكتب متنوّعة — معرض القاهرة 2025.</li>
+        </ul>
+      </section>
+
+      <!-- Workshops -->
+      <section id="workshops" class="card reveal" aria-labelledby="h-workshops">
+        <h2 id="h-workshops">التدريب وورش العمل</h2>
+        <p>
+          خبرة تدريبية تتجاوز ألفي متدرّب عبر مؤسسات منها: أكاديمية أونا، Free Press Unlimited،
+          Cairo Media School، إضافة إلى الجامعات المصرية (الأمريكية، القاهرة، الألسن، عين شمس، زويل، البريطانية، قناة السويس، مصر، بدر...).
+          محاضر دائم بمكتبة الإسكندرية في اليوم العالمي للغة العربية، ومحاضر بنقابة الصحفيين.
+          مشاركات خارج مصر (أبو ظبي 2024، الكويت 2024).
+        </p>
+        <h3>كتاب الأسلوب (Style Book)</h3>
+        <p>إعداد أدلة أسلوب لمؤسسات إعلامية: مجلة أكتوبر، جريدة الطريق، مواقع دوت مصر ومبتدا ومنشور وسوبر ماما وصحيفة اليوم السعودية.</p>
+        <h3>برامج ودبلومات أقدمها</h3>
+        <ul class="bullets">
+          <li>دبلومة صناعة المحتوى بالذكاء الاصطناعي.</li>
+          <li>الأخطاء الإملائية والنحوية والأسلوبية الشائعة.</li>
+          <li>صناعة الريلز من الفكرة حتى المونتاج والتسويق.</li>
+          <li>صناعة البودكاست: الفكرة والكتابة والمكساج والمونتاج.</li>
+          <li>بناء وإنتاج الدورات: المنهج وتقنيات الشرح والأدوات.</li>
+          <li>كيف تصبح محرّر ديسك؟</li>
+          <li>اللغة العربية للإعلاميين والمذيعين.</li>
+          <li>فن التلخيص وتقنيات الذكاء الاصطناعي.</li>
+          <li>التدقيق اللغوي بالذكاء الاصطناعي والماكرو.</li>
+          <li>مايكروسوفت وورد من الألف إلى الياء.</li>
+          <li>المونتاج بـ Camtasia.</li>
+          <li>أساسيات لغة بايثون.</li>
+        </ul>
+      </section>
+
+      <!-- Books -->
+      <section id="books" class="card reveal" aria-labelledby="h-books">
+        <h2 id="h-books">مؤلفاتي</h2>
+        <ul class="bullets">
+          <li><strong>عطايا الأربعين</strong> — مقالات، دار كيان، 2025.</li>
+          <li><strong>كتاب الحب</strong> — الطبعة الثانية، مقالات، عصير الكتب، 2021.</li>
+          <li><strong>كتاب الونس</strong> — الطبعة الرابعة، مقالات، دار تويا، 2020.</li>
+          <li><strong>كتاب التعافي</strong> — الطبعة الثانية عشرة، مقالات، دار تويا، 2019.</li>
+          <li><strong>لديّ الكثير جدًا لأقوله لكِ</strong> — الطبعة الثالثة، مقالات، دار تشكيل، 2018.</li>
+          <li><strong>بتوقيت القاهرة</strong> — رواية، دار دوّن.</li>
+          <li><strong>أسود لامع بطريقة غادرة</strong> — قصص قصيرة، دار تشكيل.</li>
+          <li><strong>يوميات مدرس في الأرياف</strong> — متتالية ساخرة، دار اكتب.</li>
+        </ul>
+        <h3>تحت الإعداد</h3>
+        <ul class="bullets">
+          <li>كتاب <em>اكتب صح</em> — طريقة معاصرة لتعليم العربية والتدقيق والماكرو والذكاء الاصطناعي.</li>
+          <li><em>الذكاء الاصطناعي ببساطة</em> — دراسة عملية لنماذج الذكاء الاصطناعي وتوظيفها في المحتوى العربي.</li>
+        </ul>
+      </section>
+
+      <!-- Links -->
+      <section id="links" class="card reveal" aria-labelledby="h-links">
+        <h2 id="h-links">روابط مهمة</h2>
+        <div class="links" role="list">
+          <a class="link" href="#" aria-label="فيسبوك">فيس بوك</a>
+          <a class="link" href="#" aria-label="لينكد إن">لينكد إن</a>
+          <a class="link" href="#" aria-label="ويكيبيديا">ويكيبيديا</a>
+          <a class="link" href="#" aria-label="تيك توك">تيك توك</a>
+          <a class="link" href="#" aria-label="إنستجرام">إنستجرام</a>
+          <a class="link" href="#" aria-label="يوتيوب">يوتيوب</a>
+          <a class="link" href="#" aria-label="تليجرام">تليجرام</a>
+          <a class="link" href="#" aria-label="موقع اكتب صح">موقع «اكتب صح»</a>
+          <a class="link" href="#" aria-label="اكتب صح فيس بوك">«اكتب صح» — فيسبوك</a>
+          <a class="link" href="#" aria-label="من هم؟">من هم؟</a>
+          <a class="link" href="#" aria-label="مسلسل">مسلسل — أعددت له السيناريو</a>
+          <a class="link" href="#" aria-label="مبادرة">مبادرة «الذكاء الاصطناعي ببساطة»</a>
+          <a class="link" href="#" aria-label="بودكاست">بودكاست «كلام حسام»</a>
+        </div>
+        <!-- ملاحظة: أضِف الروابط الحقيقية بدل # -->
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="card reveal" aria-labelledby="h-contact">
+        <h2 id="h-contact">وسائل التواصل</h2>
+        <ul class="list">
+          <li class="row"><strong>الهاتف:</strong> <a href="tel:+201006763171">00201006763171</a></li>
+          <li class="row"><strong>البريد:</strong> <a href="mailto:hosammostafa_it@yahoo.com">hosammostafa_it@yahoo.com</a></li>
+          <li class="row"><strong>العنوان:</strong> العبور، الحي الثاني، محلية 2، شارع 1 المتفرع من يوسف جوهر، مصر</li>
+        </ul>
+        <div class="sep"></div>
+        <h3>اللغات</h3>
+        <!-- ملاحظة: البيانات ناقصة هنا -->
+        <p><!-- ملاحظة: الرجاء تزويد مستوى اللغات لإظهاره هنا. --></p>
+      </section>
+    </main>
+  </div>
+
+  <button class="back-top" id="backTop" aria-label="العودة للأعلى">⬆︎ أعلى</button>
+
+  <script>
+    // Theme toggle with localStorage
+    const root = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('cv-theme');
+    if(savedTheme){ document.documentElement.setAttribute('data-theme', savedTheme); }
+    themeToggle?.addEventListener('click', ()=>{
+      const cur = document.documentElement.getAttribute('data-theme');
+      const next = cur === 'light' ? '' : 'light';
+      if(next) document.documentElement.setAttribute('data-theme','light');
+      else document.documentElement.removeAttribute('data-theme');
+      localStorage.setItem('cv-theme', next);
+    });
+
+    // Print
+    document.getElementById('printBtn')?.addEventListener('click', ()=> window.print());
+
+    // Download original (set href if available)
+    const dl = document.getElementById('downloadCV');
+    // <!-- ملاحظة: إن وُجد رابط للملف الأصلي ضعْه هنا -->
+    dl?.setAttribute('href', '#'); // استبدل بـ رابط Google Drive/Dropbox
+
+    // Back to top
+    const back = document.getElementById('backTop');
+    window.addEventListener('scroll', ()=>{
+      back.classList.toggle('show', window.scrollY > 600);
+    });
+    back?.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
+
+    // Reveal on scroll (respect reduced motion)
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(!prefersReduced){
+      const els = document.querySelectorAll('.reveal');
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{
+          if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, {threshold:.12});
+      els.forEach(el=> io.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach(el=> el.classList.add('in'));
+    }
+  </script>
+
+  <!-- JSON-LD Person -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"حسام مصطفى إبراهيم",
+    "jobTitle":"كاتب صحفي ومستشار تدريب مُعتمد",
+    "email":"mailto:hosammostafa_it@yahoo.com",
+    "telephone":"+201006763171",
+    "address":{
+      "@type":"PostalAddress",
+      "addressCountry":"EG",
+      "addressLocality":"العبور",
+      "streetAddress":"الحي الثاني، محلية 2، شارع 1 المتفرع من يوسف جوهر"
+    },
+    "nationality":"Egyptian",
+    "url":"", 
+    "sameAs":[
+      "", "", "", "", "", ""
+    ]
+  }
+  </script>
+</body>
+</html>
